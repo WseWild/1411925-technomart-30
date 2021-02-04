@@ -269,7 +269,7 @@ user-info {
   width: 220px;
   height: 38px;
   background-color: white;
-  border: 1px solid var:var(--special-border-grey);
+  border: 1px solid var(--special-border-grey);
 }
 
 /*Пока только для хрома*/
@@ -790,7 +790,7 @@ user-info {
 }
 
 .category-plate h2 {
-  font-family: font-family: Cuprum, Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 24px;
   line-height: 30px;
   margin-left: 23px;
