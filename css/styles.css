@@ -226,27 +226,27 @@ user-info {
 .search {
   background-color: var(--basic-extra-dark);
   line-height: 24px;
-  width: 228px;
+  width: 100%;
   min-height: 42px;
   border: none;
   outline: none;
   padding-left: 42px;
+  position: relative;
 }
 
-.form-block::before {
-  content: "";
+.search-icon {
   position: absolute;
-  top: 11px;
-  left: 16px;
-  background-image: url("../img/icon-search.svg");
-  width: 17px;
-  height: 17px;
-  background-repeat: no-repeat;
-  opacity: .3;
+  left: 17px;
+  top: 12px;
+  opacity: 0.3;
 }
 
-.search-button {
-   display: none;
+.search-icon:hover {
+  opacity: 1;
+}
+
+.search-icon:active {
+  opacity: 0.3;
 }
 
 .form-block:hover::before {
@@ -257,8 +257,15 @@ user-info {
     opacity: .5;
 }
 
+input.search:focus + label>svg>path {
+  fill: var(--basic-red);
+}
 
-.search:focus  {
+input.search:focus + label>svg {
+  opacity: initial;
+}
+
+.search:focus {
   background-color: var(--basic-white);
   color: var(--basic-black);
 }
@@ -272,7 +279,6 @@ user-info {
   border: 1px solid var(--special-border-grey);
 }
 
-/*Пока только для хрома*/
 ::-webkit-input-placeholder ,
 .footer-contacts *,
 .footer-navigation a,
@@ -286,6 +292,11 @@ user-info {
 .popular-product a ,
 .category-plate h2,
 .category-plate a  {
+  color: var(--basic-white);
+}
+
+::-moz-placeholder   {
+  opacity: 1;
   color: var(--basic-white);
 }
 
