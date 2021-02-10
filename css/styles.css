@@ -66,7 +66,8 @@ ul {
   grid-template-rows: min-content 1fr min-content;
 }
 
-header {
+header,
+.services {
   background-color: var(--basic-extra-lightgrey);
  }
 
@@ -525,7 +526,7 @@ input.search:focus + label>svg {
 .grid {
   display: grid;
   grid-template-columns: 220px 220px 220px;
-  grid-gap: 20px;
+  grid-gap: 18px;
   justify-content: end;
   margin-top: 28px;
 }
@@ -536,6 +537,15 @@ input.search:focus + label>svg {
   grid-gap: 20px;
   justify-content: end;
   margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.popular-manufacturer {
+  margin-bottom: 69px;
+}
+
+.popular-manufacturer li {
+  height: 145px;
 }
 
 /* category-plate */
@@ -656,13 +666,13 @@ input.search:focus + label>svg {
   width: 100%;
   min-height: 89px;
   background-color: var(--basic-background);
-  margin-top: 70px;
+  margin-top: 59px;
   align-items: center;
 }
 
 .popular-product a {
   height: 38px;
-  margin-right: 20px;
+  margin-right: 17px;
   min-width: 192px
 }
 
@@ -675,16 +685,18 @@ input.search:focus + label>svg {
   border: 1px solid #EAEAEA;
 }
 
-.gridit img {
-  margin-left: 33px;
-  margin-top:22px;
+.gridit>img {
+  width: 194px;
+  height: 164px;
+  object-fit: scale-down;
 }
 
 .gridit h3 {
-  width: 157px;
   text-align: center;
-  margin-left: 30px;
-  margin-bottom: 10px;
+    margin-left: 17px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    margin-top: 6px;
 }
 
 .before-discount {
@@ -725,6 +737,69 @@ input.search:focus + label>svg {
   margin: 0;
 }
 
+.services {
+  padding-bottom: 100px;
+}
+
+.services__container h2 {
+  margin-top: 65px;
+  margin-bottom: 11px;
+}
+
+.services__container p {
+  margin-right: 535px;
+  margin-bottom: 70px;
+}
+
+.services-menu {
+  margin-right: 80px;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-menu li {
+  height: 61px;
+  display: flex;
+  align-items: center;
+  padding-left: 22px;
+  font-weight: 700;
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+  background-color: var(--basic-grey);
+}
+
+.services-menu li:hover {
+  background-color: var(--special-extra-dark );
+}
+
+.services-menu li:active {
+  background-color: var(--basic-white);
+  color: var(--basic-grey);
+
+}
+
+.services-menu__ship-text {
+  width: 620px;
+}
+
+.services-menu__ship-text h2 {
+  margin: 0;
+  margin-bottom: 29px;
+}
+
+.services-menu__ship-text :nth-child(2) {
+  margin: 0;
+  margin-right: 340px;
+}
+
+.services-menu__ship-text :nth-child(3) {
+  margin: 0;
+  margin-right: 440px;
+}
+
 .mart-info {
   margin: 0;
   margin-bottom: 25px;
@@ -752,7 +827,7 @@ input.search:focus + label>svg {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -767,7 +842,7 @@ input.search:focus + label>svg {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -812,7 +887,8 @@ input.search:focus + label>svg {
 .company h2,
 .title,
 .perf-wrap h2,
-.popular-product h2 {
+.popular-product h2,
+.services h2 {
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -821,7 +897,8 @@ input.search:focus + label>svg {
 
 .contacts p,
 .company p,
-.perf-wrap p {
+.perf-wrap p,
+.services p {
   font-family: PT Sans,  Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -1063,7 +1140,8 @@ ul,
   border: none;
 }
 
-.item-list h3 {
+.item-list h3,
+.gridit h3 {
   font-family: PT Sans, Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -1188,4 +1266,8 @@ fieldset {
 .title-wrapper {
   background-color: var(--basic-extra-lightgrey);
   min-height: 89px;
+}
+
+.buying-bookmark {
+  display: none;
 }
