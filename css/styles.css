@@ -26,8 +26,13 @@
 }
 /* Убираем отступы у списка */
 ul {
-    padding: 0; margin: 0;
-   }
+  padding: 0;
+  margin: 0;
+}
+ p,
+ h2 {
+   margin: 0;
+ }
 
 .container  {
   display: flex;
@@ -292,7 +297,8 @@ input.search:focus + label>svg {
 .lost-butt,
 .popular-product a ,
 .category-plate h2,
-.category-plate a  {
+.category-plate a,
+.services-menu__credit-text a {
   color: var(--basic-white);
 }
 
@@ -749,6 +755,7 @@ input.search:focus + label>svg {
 .services__container p {
   margin-right: 535px;
   margin-bottom: 70px;
+  margin-top: 10px;
 }
 
 .services-menu {
@@ -781,10 +788,18 @@ input.search:focus + label>svg {
 
 }
 
-.services-menu__ship-text {
+.services-menu__ship-text,
+.services-menu__guarantee-text,
+.services-menu__credit-text {
   width: 620px;
 }
 
+/* Прячем блоки */
+.services-menu__ship-text,
+.services-menu__guarantee-text {
+  display: none;
+}
+/* ship-text */
 .services-menu__ship-text h2 {
   margin: 0;
   margin-bottom: 29px;
@@ -799,6 +814,18 @@ input.search:focus + label>svg {
   margin: 0;
   margin-right: 440px;
 }
+
+/* credit-text */
+.services-menu__credit-text h2 {
+  margin-bottom: 27px;
+}
+
+.services-menu__credit-text a {
+  margin-top: 26px;
+  margin-right: 425px;
+}
+
+/* guarantee-text */
 
 .mart-info {
   margin: 0;
@@ -820,7 +847,8 @@ input.search:focus + label>svg {
 
 .more-company,
 .lost-butt,
-.popular-product a {
+.popular-product a,
+.services-menu__credit-text a {
   background-color: var(--basic-red);
   display: flex;
   min-height: 38px;
@@ -876,11 +904,12 @@ input.search:focus + label>svg {
 }
 
 .category-plate h2 {
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;margin-top: 13px;
   font-size: 24px;
   line-height: 30px;
   margin-left: 23px;
-  margin-bottom: 14px ;
+  margin-bottom: 14px;
+  margin-top: 20px;
 }
 
 .contacts h2,
