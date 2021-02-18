@@ -725,7 +725,8 @@ input.search:focus + label>svg {
   display: flex;
   width: 940px;
   margin: 0 auto;
-  margin-bottom: 55px;
+  margin-bottom: 70px;
+  padding-top: 72px;
 }
 
 .company {
@@ -882,8 +883,7 @@ input.search:focus + label>svg {
 }
 
 .mart-info {
-  margin: 0;
-  margin-bottom: 25px;
+  margin: 25px 0;
 }
 
 .shipping-info {
@@ -948,8 +948,8 @@ input.search:focus + label>svg {
   width: 300px;
 }
 
-.contacts h2 {
-  margin-bottom: 12px;
+.contacts p {
+  margin-top: 22px;
 }
 
 .map-pic {
@@ -992,6 +992,27 @@ input.search:focus + label>svg {
 ul,
 .shipping-company li {
   list-style-type: none;
+}
+
+.shipping-company {
+  margin-left: 38px;
+}
+
+.shipping-company__del-lines,
+.shipping-company__autotraiding,
+.shipping-company__jeldor {
+  position: relative;
+}
+
+.shipping-company__del-lines::before,
+.shipping-company__autotraiding::before,
+.shipping-company__jeldor::before {
+  content: '';
+  width: 26px;
+  position: absolute;
+  border-bottom: 2px solid var(--basic-red);
+  left: -38px;
+  top: 10px;
 }
 
 .filter label {
