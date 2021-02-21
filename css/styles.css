@@ -5,15 +5,19 @@
     --basic-extra-dark: #293449;
     --basic-grey: #32425C;
     --basic-greylight: #C5C5C5;
+    --basic-greylight-opacity-03:rgba(197, 197, 197, 0.3);
     --basic-red: #EE3643;
     --basic-green: #63A63E;
     --basic-black: #000000;
     --basic-white: #ffffff;
+    --basic-white-opacity-05: rgba( 255,255,255, 0.5);
+    --basic-white-opacity-03: rgba( 255,255,255, 0.3);
     --basic-extra-lightgrey: #F3F7F9;
     --special-grey: #3D546F;
     --special-extra-dark: #1D2739;
     --special-background: #F9F5F0;
     --special-greylight: #A9A9A9;
+    --special-greylight-opacity-03:rgba(169, 169, 169, 0.3);
     --special-greenlight: #5FBB2D;
     --special-greendark: #518534;
     --special-warmgrey: #F7F3EC;
@@ -24,15 +28,6 @@
     --special-green: #8ED78F;
     --special-extra-navy: #212A3A;
 }
-/* Убираем отступы у списка */
-ul {
-  padding: 0;
-  margin: 0;
-}
- p,
- h2 {
-   margin: 0;
- }
 
 .container  {
   display: flex;
@@ -71,6 +66,18 @@ ul {
   grid-template-rows: min-content 1fr min-content;
 }
 
+.services-menu__credit-text h2,
+.services-menu__credit-text p,
+.services-menu__guarantee-text h2,
+.services-menu__guarantee-text p,
+.services-menu__ship-text h2,
+.services-menu__ship-text p,
+.company-wrapper h2,
+.contacts h2,
+.contacts p {
+  margin: 0;
+}
+
 header,
 .services {
   background-color: var(--basic-extra-lightgrey);
@@ -92,7 +99,6 @@ img {
 .logo-top {
   background-color: var(--basic-red);
   /* доработать тень */
-  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
   min-width: 220px;
   height: 42px;
 }
@@ -198,6 +204,8 @@ user-info {
 }
 
 .user-navigation {
+  padding: 0;
+  margin: 0;
   display: flex;
   width: 345px;
   min-height: 45px;
@@ -260,7 +268,7 @@ user-info {
 }
 
 .form-block:active::before {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 input.search:focus + label>svg>path {
@@ -357,7 +365,7 @@ input.search:focus + label>svg {
 
 .main-navigation a:focus {
   background-color: var(--special-extra-dark);
-  color: rgba(255,255,255,0.5);
+  opacity: 0.5;
 }
 
 .header-middle h1,
@@ -406,6 +414,8 @@ input.search:focus + label>svg {
 /*site-navigation*/
 
 .site-navigation {
+  padding: 0;
+  margin: 0;
   display: flex;
   min-height: 60px;
   flex-wrap: wrap;
@@ -484,10 +494,14 @@ input.search:focus + label>svg {
 }
 
 .manufacturers ul {
+  padding: 0;
+  margin: 0;
   margin-top: 15px;
 }
 
 .battery-type ul {
+  padding: 0;
+  margin: 0;
   margin-top: 20px;
 }
 
@@ -538,6 +552,8 @@ input.search:focus + label>svg {
 }
 
 .index-grid {
+  padding: 0;
+  margin: 0;
   display: grid;
   grid-template-columns: 220px 220px 220px 220px;
   grid-gap: 20px;
@@ -760,6 +776,8 @@ input.search:focus + label>svg {
 }
 
 .services-menu {
+  padding: 0;
+  margin: 0;
   margin-right: 80px;
   min-width: 240px;
   display: flex;
@@ -891,6 +909,8 @@ input.search:focus + label>svg {
 }
 
 .shipping-company {
+  padding: 0;
+  margin: 0;
   margin-bottom: 19px;
 }
 
@@ -929,15 +949,15 @@ input.search:focus + label>svg {
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--basic-white-opacity-03);
 }
 
 .category-plate a:hover {
-  background-color: rgba(197, 197, 197, 0.3) ;
+  background-color: var(--basic-greylight-opacity-03);
 }
 
 .category-plate a:active {
-  background-color:rgba(169, 169, 169, 0.3);
+  background-color: var(--special-greylight-opacity-03);
 }
 
 .more-company {
@@ -958,7 +978,7 @@ input.search:focus + label>svg {
 }
 
 .category-plate h2 {
-  font-family: Cuprum, Arial, sans-serif;margin-top: 13px;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 24px;
   line-height: 30px;
   margin-left: 23px;
@@ -1055,7 +1075,7 @@ ul,
   border-radius: 2px;
 }
 
-.page-navigation  :nth-child(4){
+.page-navigation li:nth-child(4){
     width: 140px;
 }
 
@@ -1095,6 +1115,8 @@ ul,
 }
 
 .footer-navigation {
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -1115,6 +1137,8 @@ ul,
 }
 
 .category {
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   padding-top: 10px;
@@ -1147,6 +1171,8 @@ ul,
 }
 
 .social-list {
+  padding: 0;
+  margin: 0;
   display: flex;
   margin-top: 34px;
   margin-right: 0px;
@@ -1359,7 +1385,7 @@ fieldset {
 
 .checkout:active {
   background-color: var(--basic-green);
-  color: rgba(255, 255, 255, .5);
+  color: var(--basic-white-opacity-05);
 }
 
 .cart:hover::before,
