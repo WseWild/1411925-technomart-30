@@ -27,13 +27,14 @@
   --special-violet: #DC91D8;
   --special-green: #8ED78F;
   --special-extra-navy: #212A3A;
+  --special-extra-greylight: #EAEAEA;
 }
 
 .container  {
   display: flex;
   width: 940px;
-  margin:0 auto;
-  padding: 0 0px;
+  margin: 0 auto;
+  padding: 0 0;
   flex-wrap: wrap ;
 }
 
@@ -52,8 +53,6 @@
 }
 
 .page-body {
-  padding: 0;
-  margin: 0;
   font-family: Cuprum, Arial, sans-serif;
   font-style: normal;
   font-size: 18px;
@@ -67,6 +66,7 @@
 }
 
 .services-menu__credit-text h2,
+.title-main,
 .services-menu__credit-text p,
 .services-menu__guarantee-text h2,
 .services-menu__guarantee-text p,
@@ -74,8 +74,34 @@
 .services-menu__ship-text p,
 .company-wrapper h2,
 .contacts h2,
-.contacts p {
+.contacts p,
+.feedback p,
+.devs p,
+.title,
+.before-discount,
+.actual-price,
+.shipping-info,
+.rights p {
   margin: 0;
+}
+
+.user-navigation-sub__menu,
+.sorting,
+.social-list,
+.user-navigation,
+.site-navigation,
+.breadcrumbs,
+.manufacturers ul,
+.battery-type ul,
+.index-grid,
+.services-menu,
+.shipping-company,
+.footer-navigation,
+.category,
+.login-field   {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 header,
@@ -158,20 +184,13 @@ img {
 }
 
 .title-main {
-  margin: 0;
   width: 270px;
   padding-top: 27px;
   padding-left: 30px;
   margin-right: 20px;
 }
 
-user-info {
-  width: 350px;
-}
-
 .user-navigation-sub__menu {
-  margin: 0;
-  padding: 0;
   padding-left: 95px;
   padding-top: 4px;
 }
@@ -187,8 +206,6 @@ user-info {
 }
 
 .login-field {
-  margin:0;
-  padding: 0;
   background-color: var(--basic-white);
   height: 45px;
   display: flex;
@@ -226,6 +243,7 @@ user-info {
 
 .login-field li  {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .contacts-group {
@@ -239,8 +257,6 @@ user-info {
 }
 
 .user-navigation {
-  padding: 0;
-  margin: 0;
   display: flex;
   width: 345px;
   min-height: 45px;
@@ -252,20 +268,20 @@ user-info {
   background-color: var(--basic-white);
 }
 
-.user-navigation  :nth-child(1) {
+.user-navigation__signup {
   width: 100px;
   display: flex;
   justify-content: center;
-  align-items:center ;
+  align-items: center;
   padding-left:21px;
   margin-right: 12px;
 }
 
-.user-navigation :nth-child(2){
+.user-navigation__registration {
   width: 150px;
   display: flex;
   justify-content: center;
-  align-items:center ;
+  align-items: center;
 }
 
 .header-top {
@@ -345,7 +361,7 @@ input.search:focus + label>svg {
   color: var(--basic-white);
 }
 
-::-moz-placeholder   {
+::-moz-placeholder {
   opacity: 1;
   color: var(--basic-white);
 }
@@ -442,15 +458,14 @@ input.search:focus + label>svg {
   color: var(--basic-greylight);
 }
 
-.company, .contacts {
+.company,
+ .contacts {
   background-color: var(--basic-white);
 }
 
 /*site-navigation*/
 
 .site-navigation {
-  padding: 0;
-  margin: 0;
   display: flex;
   min-height: 60px;
   flex-wrap: wrap;
@@ -462,7 +477,7 @@ input.search:focus + label>svg {
   flex-grow: 1;
 }
 
-.site-navigation li a {
+.site-navigation a {
   display: inline-block;
   padding: 18px 28px;
   vertical-align: middle;
@@ -474,7 +489,6 @@ input.search:focus + label>svg {
 
 /* catalog */
 .breadcrumbs {
-  margin: 0;
   width:100%;
   min-height: 60px;
 }
@@ -491,7 +505,6 @@ input.search:focus + label>svg {
 }
 
 .title {
-  margin: 0;
   padding-left: 30px;
   padding-top: 28px;
 }
@@ -530,14 +543,10 @@ input.search:focus + label>svg {
 }
 
 .manufacturers ul {
-  padding: 0;
-  margin: 0;
   margin-top: 15px;
 }
 
 .battery-type ul {
-  padding: 0;
-  margin: 0;
   margin-top: 20px;
 }
 
@@ -551,7 +560,7 @@ input.search:focus + label>svg {
   margin-right: 8px;
 }
 
-.sorting-wrapper{
+.sorting-wrapper {
   width: 700px;
   height: 38px;
   margin-top: 18px;
@@ -561,8 +570,6 @@ input.search:focus + label>svg {
 .sorting {
   display: inline-block;
   vertical-align: middle;
-  margin: 0;
-  padding: 0;
 }
 
 .sorting li {
@@ -592,8 +599,6 @@ input.search:focus + label>svg {
 }
 
 .index-grid {
-  padding: 0;
-  margin: 0;
   display: grid;
   grid-template-columns: 220px 220px 220px 220px;
   grid-gap: 20px;
@@ -744,7 +749,7 @@ input.search:focus + label>svg {
 
 .gridit {
   height: 316px;
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(--special-extra-greylight);
 }
 
 .gridit>img {
@@ -762,7 +767,6 @@ input.search:focus + label>svg {
 }
 
 .before-discount {
-  margin: 0;
   margin-left: 78px;
   height: 18px;
   margin-top: 8px;
@@ -772,7 +776,6 @@ input.search:focus + label>svg {
 .actual-price {
   width: 140px;
   height: 38px;
-  margin: 0;
   margin-bottom: 21px;
   margin-left: 44px;
   display: flex;
@@ -791,16 +794,14 @@ input.search:focus + label>svg {
 .company {
   display: flex;
   flex-direction: column;
-  margin: 0;
   width: 460px;
   margin-right:180px;
 }
 
- section.contacts.container {
+ .contacts {
   display: flex;
   flex-direction: column;
   width: 300px;
-  margin: 0;
 }
 
 .services {
@@ -819,8 +820,6 @@ input.search:focus + label>svg {
 }
 
 .services-menu {
-  padding: 0;
-  margin: 0;
   margin-right: 80px;
   min-width: 240px;
   display: flex;
@@ -857,12 +856,13 @@ input.search:focus + label>svg {
 }
 
 /* Прячем блоки */
-/* .services-menu__credit-text, */
-.services-menu__ship-text,
+.services-menu__credit-text,
+/* .services-menu__ship-text, */
 .services-menu__guarantee-text
 {
   display: none;
 }
+
 /* ship-text */
 
 .services-menu__ship-text  {
@@ -870,7 +870,6 @@ input.search:focus + label>svg {
 }
 
 .services-menu__ship-text h2 {
-  margin: 0;
   margin-bottom: 29px;
 }
 
@@ -886,7 +885,6 @@ input.search:focus + label>svg {
 }
 
 .services-menu__ship-text :nth-child(2) {
-  margin: 0;
   margin-right: 340px;
 }
 
@@ -901,7 +899,6 @@ input.search:focus + label>svg {
 }
 
 .services-menu__ship-text :nth-child(3) {
-  margin: 0;
   margin-right: 440px;
 }
 
@@ -947,13 +944,7 @@ input.search:focus + label>svg {
   margin: 25px 0;
 }
 
-.shipping-info {
-  margin: 0;
-}
-
 .shipping-company {
-  padding: 0;
-  margin: 0;
   margin-bottom: 19px;
 }
 
@@ -1158,8 +1149,6 @@ ul,
 }
 
 .footer-navigation {
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -1167,7 +1156,7 @@ ul,
   padding-top: 23px;
 }
 
-.footer-navigation li a {
+.footer-navigation a {
   display: inline-block;
   padding: 15px 0;
   padding-left: 59px;
@@ -1180,8 +1169,6 @@ ul,
 }
 
 .category {
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
   padding-top: 10px;
@@ -1202,11 +1189,6 @@ ul,
   padding-bottom: 55px;
 }
 
-.rights p {
-  padding: 0;
-  margin: 0;
-}
-
 .rights {
   padding-top: 38px;
   width: 260px;
@@ -1214,12 +1196,9 @@ ul,
 }
 
 .social-list {
-  padding: 0;
-  margin: 0;
   display: flex;
   margin-top: 34px;
   margin-right: 0px;
-
 }
 
 .social-button {
@@ -1241,8 +1220,6 @@ ul,
 .footer-feedback {
   display: flex;
   width: 300px;
-  align-items: flex-end;
-
 }
 
 .feedback {
@@ -1250,8 +1227,9 @@ ul,
   margin-right: 53px;
 }
 
-.footer-feedback>div>p {
-  margin: 0;
+.feedback p:nth-child(1),
+.devs p:nth-child(1) {
+  padding-top: 31px;
   padding-bottom: 5px;
 }
 
