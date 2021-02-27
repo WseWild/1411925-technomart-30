@@ -546,7 +546,6 @@ input.search:focus + label>svg {
   padding-left: 18px;
 }
 
-
 .price {
   padding:0;
   margin-bottom: 25px;
@@ -1300,18 +1299,71 @@ ul,
   text-transform: uppercase;
 }
 
-.sorting a {
+.sorting__price,
+.sorting_type,
+.sorting__functionality {
   color: var(--basic-greylight);
   border-bottom: 1px dotted var(--basic-red);
 }
 
-.sorting a:hover {
+.sorting__price:hover,
+.sorting_type:hover,
+.sorting__functionality:hover {
   border-bottom: 1px solid var(--basic-red);
 }
 
-.sorting a:focus {
+.sorting__price:focus,
+.sorting_type:focus,
+.sorting__functionality:focus {
   color: var(--basic-red);
   border: none;
+}
+
+.sorting__ascending {
+  position: relative;
+}
+
+.sorting__ascending::after {
+  position: absolute;
+  content:"";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 10px 5px;
+  border-color: var(--basic-greylight)  transparent;
+  right: 9px;
+  top: 4px;
+}
+.sorting__ascending:hover::after {
+  border-color: var(--basic-black) transparent;
+}
+
+.sorting__ascending:active::after {
+  border-color: var(--basic-red) transparent;
+}
+
+.sorting__descending {
+  position: relative;
+}
+
+.sorting__descending::after {
+  position: absolute;
+  content:"";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5px 0px 5px;
+  border-color: var(--basic-greylight) transparent;
+  left: 13px;
+  top: 4px;
+}
+
+.sorting__descending:hover::after {
+  border-color: var(--basic-black) transparent;
+}
+
+.sorting__descending:active::after {
+  border-color: var(--basic-red) transparent;
 }
 
 .item-list h3,
