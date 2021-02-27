@@ -389,7 +389,8 @@ input.search:focus + label>svg {
 .sorting li,
 .sorting a:hover,
 .item-title,
-.page-navigation a {
+.page-navigation a,
+.breadcrumbs a  {
   color: var(--basic-black);
 }
 
@@ -491,13 +492,35 @@ input.search:focus + label>svg {
 .breadcrumbs {
   width:100%;
   min-height: 60px;
+  display: flex;
 }
 
 .breadcrumbs li {
-  display: inline-block;
   vertical-align: middle;
+  margin-right: 41px;
+  position: relative;
   height: 100%;
   padding-top: 20px;
+}
+
+.breadcrumbs li::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 12px;
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  right: -23px;
+  top: 25px;
+}
+
+.breadcrumbs li:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs__current::after{
+  display: none;
 }
 
 .title-wrapper {
