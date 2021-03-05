@@ -18,7 +18,7 @@
     <header>
       <div class="header-top">
         <div class="container">
-          <a class="logo-top" >
+          <a class="logo-top">
             <img src="img/logo-technomart.svg"  width="108" height="18" alt="Логотип магазина Техномарт">
           </a>
           <form class="form-block" action="https://echo.htmlacademy.ru/">
@@ -47,8 +47,16 @@
         <div>
           <h2 class="visually-hidden">Личный кабинет</h2>
           <ul class="user-navigation">
-            <li class="user-navigation__signup"><a href="blank.html">Войти</a></li>
-            <li class="user-navigation__registration"><a href="blank.html">Регистрация</a></li>
+            <li class="user-navigation__signup">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"/>
+                <path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/>
+              </svg>
+              <a class="user-navigation__signup-link" href="blank.html">Войти</a>
+            </li>
+            <li class="user-navigation__registration">
+              <a class="user-navigation__registration-link" href="blank.html">Регистрация</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -69,29 +77,32 @@
       <section >
         <ul class="category-plate container">
           <li class="plate-materials">
-            <h2>Материалы</h2>
-            <a href="#">На любой вкус</a>
+            <h2 class="plate-title">Материалы</h2>
+            <a class="plate-button" href="#">На любой вкус</a>
           </li>
           <li class="plate-instr">
-            <h2>Инструменты</h2>
-            <a href="#">На все случаи</a>
+            <h2 class="plate-title">Инструменты</h2>
+            <a class="plate-button" href="#">На все случаи</a>
           </li>
           <li class="plate-tech">
-            <h2>Техника</h2>
-            <a href="#">Для стройки</a>
+            <h2 class="plate-title">Техника</h2>
+            <a class="plate-button" href="#">Для стройки</a>
           </li>
-          <li class="plate-perfs">
+          <li class="plate-perfs plate-slider">
+            <h2 class="plate-perfs__title">Перфораторы</h2>
+            <p class="plate-perfs__description">Настоящие мужские игрушки</p>
+            <a class="plate-perfs__catalog-button" href="catalog.html">Открыть каталог</a>
             <img src="img/man-with-perf.jpg" width="620" height="266" alt="Перфоратор BOSCH в действии">
-            <h2>Перфораторы</h2>
-            <a href="catalog.html">Открыть каталог</a>
-          </li>
+            <a class="plate-perfs__button-left" href="#"></a>
+            <a class="plate-perfs__button-right" href="#"></a>
+            </li>
           <li class="plate-discount">
-            <h2>Скидки 50%</h2>
-            <a href="#">На 350 товаров</a>
+            <h2 class="plate-title">Скидки 50%</h2>
+            <a class="plate-button" href="#">На 350 товаров</a>
           </li>
           <li class="plate-ship">
-            <h2>Доставка</h2>
-            <a href="#">Бесплатно</a>
+            <h2 class="plate-title">Доставка</h2>
+            <a class="plate-button" href="#">Бесплатно</a>
           </li>
         </ul>
       </section>
@@ -181,11 +192,11 @@
         </div>
         <div class="container">
           <ul class="services-menu">
-            <li>Доставка</li>
-            <li>Гарантия</li>
-            <li>Кредит</li>
+            <li class="services-menu__item services-menu__current">Доставка</li>
+            <li class="services-menu__item">Гарантия</li>
+            <li <li class="services-menu__item">Кредит</li>
           </ul>
-          <div class="services-menu__ship-text">
+          <div class="services-menu__ship-text ">
             <h2>Доставка</h2>
             <p>
               Мы с удовольствием доставим ваш товар прямо
@@ -196,7 +207,7 @@
               поднимая его на ваш этаж!
             </p>
           </div>
-          <div class="services-menu__guarantee-text">
+          <div class="visually-hidden services-menu__guarantee-text ">
             <h2>Гарантия</h2>
             <p>
               Если купленный у нас товар поломается или заискрит,
@@ -206,7 +217,7 @@
               Дом уж восстановите как-нибудь сами.
             </p>
           </div>
-          <div class="services-menu__credit-text">
+          <div class="services-menu__credit-text visually-hidden">
             <h2>Кредит</h2>
             <p>
               Залезть в долговую яму стало проще!
