@@ -97,11 +97,23 @@
             <fieldset class="price">
               <legend>Цена:</legend>
               <div class="price-bar">
-                <input class="price-bar" type="range" min="0" max="30000" step="500" name="range-price">
-              </div>
-              <div class="filter-price">
-                <input type="text" name="min-price">
-                <input type="text" name="max-price">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"
+                    style= "width: 80%;
+                    margin-right: 20%"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0" style=" left: 5%"></div>
+                  <div class="toggle toggle-max" tabindex="0" style=" left: 70%"></div>
+                </div>
+                <div class="filter-price">
+                  <label class="min-price">
+                     <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price" style=" left: 80%">
+                    <input type="number" name="max-price" value="30000">
+                  </label>
+                </div>
               </div>
             </fieldset>
             <hr>
