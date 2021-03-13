@@ -19,6 +19,7 @@
   --basic-black-opacity-015: rgba(0, 0, 0, 0.15);
   --basic-extra-lightgrey: #F3F7F9;
   --basic-shadow-lightgrey:#CFCFCF;
+  --special-lightgrey-background: #F4F4F4;
   --special-grey: #3D546F;
   --special-extra-dark: #1D2739;
   --special-background: #F9F5F0;
@@ -87,7 +88,8 @@
 .plate-title,
 .plate-perfs__title,
 .plate-perfs__description,
-.label-new h4 {
+.label-new h4,
+.feedback-form p {
   margin: 0;
 }
 
@@ -371,7 +373,7 @@ input.search:focus + label>svg {
   border: 1px solid var(--special-border-grey);
 }
 
-::-webkit-input-placeholder ,
+.form-block input::-webkit-input-placeholder ,
 .footer-contacts *,
 .footer-navigation a,
 .footer-bot p,
@@ -385,7 +387,8 @@ input.search:focus + label>svg {
 .category-plate h2,
 .category-plate a,
 .services-menu__credit-text a,
-.plate-perfs__description {
+.plate-perfs__description,
+.feedback-button {
   color: var(--basic-white);
 }
 
@@ -912,6 +915,10 @@ input.search:focus + label>svg {
 
 }
 
+.it1 li:hover {
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
 .label-new {
   border-bottom: 31px solid var(--basic-red);
   border-left: 31px solid transparent;
@@ -1150,7 +1157,8 @@ input.search:focus + label>svg {
 .more-company,
 .lost-butt,
 .popular-product a,
-.services-menu__credit-text a {
+.services-menu__credit-text a,
+.feedback-button {
   background-color: var(--basic-red);
   display: flex;
   min-height: 38px;
@@ -1623,8 +1631,6 @@ fieldset {
   background: var(--special-border-greenlight);
 }
 
-
-
 .range-controls .toggle {
   position: absolute;
   top: 31px;
@@ -1679,8 +1685,6 @@ fieldset {
 .scale {
   height:2px;
   background-color: var(--special-border-greylight);
-
-
 }
 
 .buying-bookmark,
@@ -1761,6 +1765,116 @@ fieldset {
 .buying-bookmark {
   display: none;
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: var(--basic-black);
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-color: var(--basic-white);
+  border-top: 7px solid var(--basic-red);
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+
+}
+
+.modal-feedback {
+  width: 620px;
+  top: auto;
+  bottom: 350px;
+  right: 13px;
+}
+
+.modal-map {
+  width: 943px;
+  height: 449px;
+  top: auto;
+  bottom: 327px;
+  left: -21px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  border: none; outline: none;
+  top: 10px;
+  right: 10px;
+  background-image: url("../img/icon-close.svg");
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 80px;
+  padding-right: 80px;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.feedback-form label {
+  margin-bottom: 11px;
+}
+
+.feedback-text {
+  margin-top: 13px;
+}
+
+.feedback-form p {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  border: 2px solid var(--basic-greylight);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.feedback-form input[type="email"],
+.feedback-form input[id="feedback-name"] {
+  width: 220px;
+  height: 38px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  padding-right: 9px;
+}
+
+.feedback-form textarea {
+  width: 460px;
+  min-height: 114px;
+  resize: none;
+  margin-bottom: 40px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  padding-right: 9px;
+}
+
+.feedback-button {
+  border: 0;
+  min-width: 460px;
+}
+
+.feedback-button__wrap {
+  padding: 39px 80px;
+  background-color: var(--special-lightgrey-background);
+}
+
+
 
 .visually-hidden {
   position: absolute;
