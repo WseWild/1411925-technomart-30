@@ -750,7 +750,6 @@ input.search:focus + label>svg {
   opacity: 0.3;
 }
 
-
 .sorting-wrapper {
   width: 700px;
   height: 38px;
@@ -823,7 +822,6 @@ input.search:focus + label>svg {
 .popular-manufacturer li:active {
   opacity: 0.5;
 }
-
 
 /* category-plate */
 
@@ -921,8 +919,6 @@ input.search:focus + label>svg {
   top: 123px;
   right: 24px;
 }
-
-
 
 .plate-discount {
   -ms-grid-row: 3;
@@ -1566,6 +1562,7 @@ ul,
 
 .footer-navigation a {
   display: inline-block;
+  vertical-align: middle;
   padding: 15px 0;
   padding-left: 59px;
 }
@@ -1587,6 +1584,7 @@ ul,
 
 .category li {
   display: inline-block;
+  vertical-align: middle;
   text-align: center;
   padding: 10px 0;
   padding-right: 58px;
